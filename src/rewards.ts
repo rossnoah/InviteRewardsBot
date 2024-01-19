@@ -29,7 +29,7 @@ export async function addReward(
   const memberRoles = member.roles;
   const roleRewards = config.rewards;
   for (const role in roleRewards) {
-    if (count >= roleRewards[role]) {
+    if (count == roleRewards[role]) {
       const roleToAdd = guild.roles.cache.get(role);
       if (roleToAdd) {
         try {
